@@ -36,7 +36,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/petugas" class="nav-link">
-                            <i class="nav-icon fas fa-book"></i>
+                            <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Data Petugas
                             </p>
@@ -63,6 +63,14 @@
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Data Peminjaman
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="<?= base_url; ?>/pembatalan" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>
+                                Data Pembatalan
                             </p>
                         </a>
                     </li>
