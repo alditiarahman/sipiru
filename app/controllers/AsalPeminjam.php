@@ -14,31 +14,31 @@ class AsalPeminjam extends Controller
     public function index()
     {
         $data['title'] = 'Data Asal Peminjam';
-        $data['asal_peminjam'] = $this->model('AsalPeminjamModel')->getAllAsalPeminjam();
+        $data['asalpeminjam'] = $this->model('AsalPeminjamModel')->getAllAsalPeminjam();
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
-        $this->view('asal_peminjam/index', $data);
+        $this->view('asalpeminjam/index', $data);
         $this->view('templates/footer');
     }
 
     public function cari()
     {
         $data['title'] = 'Data Asal Peminjam';
-        $data['asal_peminjam'] = $this->model('AsalPeminjamModel')->cariAsalPeminjam();
+        $data['asalpeminjam'] = $this->model('AsalPeminjamModel')->cariAsalPeminjam();
         $data['key'] = $_POST['key'];
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
-        $this->view('asal_peminjam/index', $data);
+        $this->view('asalpeminjam/index', $data);
         $this->view('templates/footer');
     }
 
     public function edit($id)
     {
         $data['title'] = 'Detail Asal Peminjam';
-        $data['asal_peminjam'] = $this->model('AsalPeminjamModel')->getAsalPeminjamById($id);
+        $data['asalpeminjam'] = $this->model('AsalPeminjamModel')->getAsalPeminjamById($id);
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
-        $this->view('asal_peminjam/edit', $data);
+        $this->view('asalpeminjam/edit', $data);
         $this->view('templates/footer');
     }
 
@@ -47,7 +47,7 @@ class AsalPeminjam extends Controller
         $data['title'] = 'Tambah Asal Peminjam';
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);
-        $this->view('asal_peminjam/create', $data);
+        $this->view('asalpeminjam/create', $data);
         $this->view('templates/footer');
     }
 
