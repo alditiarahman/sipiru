@@ -95,4 +95,11 @@ class Pembatalan extends Controller
             exit;
         }
     }
+
+    public function lihatlaporan()
+    {
+        $data['title'] = 'Data Laporan Pembatalan';
+        $data['pembatalan'] = $this->model('PembatalanModel')->getAllPembatalan();
+        $this->view('pembatalan/lihatlaporan', $data);
+    }
 }

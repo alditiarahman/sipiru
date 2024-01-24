@@ -24,6 +24,7 @@
                 <h3 class="card-title"><?= $data['title'] ?></h3>
                 <div class="btn-group float-right">
                     <a href="<?= base_url; ?>/peminjaman/tambah" class="btn float-right btn-xs btn btn-primary">Tambah Peminjaman</a>
+                    <a href="<?= base_url; ?>/peminjaman/lihatlaporan" class="btn float-right btn-xs btn btn-warning" target="_blank">Lihat Laporan Peminjaman</a>
                 </div>
             </div>
             <div class="card-body">

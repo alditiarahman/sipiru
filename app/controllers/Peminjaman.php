@@ -95,4 +95,11 @@ class Peminjaman extends Controller
             exit;
         }
     }
+
+    public function lihatlaporan()
+    {
+        $data['title'] = 'Data Laporan Peminjaman';
+        $data['peminjaman'] = $this->model('PeminjamanModel')->getAllPeminjaman();
+        $this->view('peminjaman/lihatlaporan', $data);
+    }
 }
