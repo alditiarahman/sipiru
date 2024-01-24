@@ -20,11 +20,11 @@
                     <h3 class="card-title"><?= $data['title']; ?></h3>
                 </div>
                 <div class="card-body">
-                    Start creating your amazing application!
+                    Selamat Datang di <b>SiPiru</b> Sistem Inromasi Peminjaman Ruangan
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer">
-                    Aplikasi Penjualan Buku
+                    Aplikasi ini diperuntukan sebagai tugas akhir praktikum web
                 </div>
                 <!-- /.card-footer-->
             </div>

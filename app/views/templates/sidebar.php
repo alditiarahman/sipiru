@@ -20,7 +20,7 @@
                     <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/home" class="nav-link">
-                            <i class="nav-icon fas fa-tachometer-alt"></i>
+                            <i class="nav-icon fas fa-th-large"></i>
                             <p>
                                 Dashboard
                             </p>
@@ -28,7 +28,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/ruangan" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-school"></i>
                             <p>
                                 Data Ruangan
                             </p>
@@ -36,7 +36,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/petugas" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-user-tie"></i>
                             <p>
                                 Data Petugas
                             </p>
@@ -44,7 +44,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/asalpeminjam" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-undo-alt"></i>
                             <p>
                                 Data Asal Peminjam
                             </p>
@@ -52,7 +52,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/peminjam" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-user-tag"></i>
                             <p>
                                 Data Peminjam
                             </p>
@@ -60,7 +60,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/peminjaman" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-user-plus"></i>
                             <p>
                                 Data Peminjaman
                             </p>
@@ -68,7 +68,7 @@
                     </li>
                     <li class="nav-item">
                         <a href="<?= base_url; ?>/pembatalan" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
+                            <i class="nav-icon fas fa-user-times"></i>
                             <p>
                                 Data Pembatalan
                             </p>

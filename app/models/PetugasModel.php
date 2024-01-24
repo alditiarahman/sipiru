@@ -60,4 +60,12 @@ class PetugasModel
 
         return $this->db->rowCount();
     }
+
+    public function cariPetugas()
+    {
+        $key = $_POST['key'];
+        $this->db->query("SELECT * FROM " . $this->table . " WHERE nama_petugas LIKE :key");
+        $this->db->bind('key', "%$key%");
+        return $this->db->resultSet();
+    }
 }

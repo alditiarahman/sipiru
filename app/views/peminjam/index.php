@@ -27,10 +27,24 @@
                 </div>
             </div>
             <div class="card-body">
+                <form action="<?= base_url; ?>/peminjam/cari" method="post">
+                    <div class="row mb-3">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="" name="key">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit">Cari Data</button>
+
+                                    <a class="btn btn-outline-danger" href="<?= base_url; ?>/peminjam">Reset</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th style="width: 10px">#</th>
+                            <th style="width: 10px">No</th>
                             <th>Nama Peminjam</th>
                             <th>Alamat</th>
                             <th>Telepon</th>

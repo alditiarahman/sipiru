@@ -22,7 +22,7 @@
             <form role="form" action="<?= base_url; ?>/pembatalan/simpanPembatalan" method="POST">
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Peminjaman ID</label>
+                        <label>ID Peminjaman</label>
                         <select class="form-control" name="id_peminjaman">
                             <option value="">Pilih</option>
                             <?php foreach ($data['peminjaman'] as $row) : ?>
@@ -31,7 +31,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Petugas ID</label>
+                        <label>Nama Petugas</label>
                         <select class="form-control" name="id_petugas">
                             <option value="">Pilih</option>
                             <?php foreach ($data['petugas'] as $row) : ?>
@@ -40,7 +40,7 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Peminjam ID</label>
+                        <label>Nama Peminjam</label>
                         <select class="form-control" name="id_peminjam">
                             <option value="">Pilih</option>
                             <?php foreach ($data['peminjam'] as $row) : ?>

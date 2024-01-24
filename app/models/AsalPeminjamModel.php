@@ -54,4 +54,12 @@ class AsalPeminjamModel
 
         return $this->db->rowCount();
     }
+
+    public function cariAsalPeminjam()
+    {
+        $key = $_POST['key'];
+        $this->db->query("SELECT * FROM " . $this->table . " WHERE asal_peminjam LIKE :key");
+        $this->db->bind('key', "%$key%");
+        return $this->db->resultSet();
+    }
 }

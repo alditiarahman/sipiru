@@ -24,7 +24,7 @@ class Peminjaman extends Controller
     public function cari()
     {
         $data['title'] = 'Data Peminjaman';
-        $data['peminjaman'] = $this->model('PeminjamanModel')->cariPeminjaman();
+        $data['peminjaman'] = $this->model('PeminjamanModel')->cariPeminjaman($_POST['key']);
         $data['key'] = $_POST['key'];
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);

@@ -58,4 +58,12 @@ class RuanganModel
 
         return $this->db->rowCount();
     }
+
+    public function cariRuangan()
+    {
+        $key = $_POST['key'];
+        $this->db->query("SELECT * FROM " . $this->table . " WHERE nama_ruangan LIKE :key");
+        $this->db->bind('key', "%$key%");
+        return $this->db->resultSet();
+    }
 }

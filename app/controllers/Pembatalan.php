@@ -24,7 +24,7 @@ class Pembatalan extends Controller
     public function cari()
     {
         $data['title'] = 'Data Pembatalan';
-        $data['pembatalan'] = $this->model('PembatalanModel')->cariPembatalan();
+        $data['pembatalan'] = $this->model('PembatalanModel')->cariPembatalan($_POST['key']);
         $data['key'] = $_POST['key'];
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);

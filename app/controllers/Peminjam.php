@@ -32,6 +32,7 @@ class Peminjam extends Controller
         $this->view('templates/footer');
     }
 
+
     public function edit($id)
     {
         $data['title'] = 'Detail Peminjam';

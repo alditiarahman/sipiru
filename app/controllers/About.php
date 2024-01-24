@@ -14,9 +14,9 @@ class About extends Controller
     public function index()
     {
         $data['title']  = 'Halaman About Me';
-        $data['nama']   = 'Muhammad Edya Rosadi';
-        $data['alamat'] = 'Jalan Adhyaksa No.2 Kayutangi Banjarmasin';
-        $data['no_hp']  = '08971137XXX';
+        $data['nama']   = 'Aldi Tiarahman';
+        $data['alamat'] = 'Jalan Bandarmasih Komp. DPR Gg. PGRI 1';
+        $data['no_hp']  = '0895XXXXXXXXX';
 
         $this->view('templates/header', $data);
         $this->view('templates/sidebar', $data);

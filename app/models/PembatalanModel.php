@@ -25,8 +25,8 @@ class PembatalanModel
         $this->db->query('SELECT pembatalan.*, peminjaman.id_peminjaman, petugas.nama_petugas, peminjam.nama_peminjam 
                           FROM ' . $this->table . ' 
                           JOIN peminjaman ON peminjaman.id_peminjaman = pembatalan.id_peminjaman 
-                          JOIN petugas ON petugas.id_petugas = peminjaman.id_petugas 
-                          JOIN peminjam ON peminjam.id_peminjam = peminjaman.id_peminjam 
+                          JOIN petugas ON petugas.id_petugas = pembatalan.id_petugas 
+                          JOIN peminjam ON peminjam.id_peminjam = pembatalan.id_peminjam 
                           WHERE pembatalan.id_pembatalan=:id_pembatalan');
         $this->db->bind('id_pembatalan', $id);
         return $this->db->single();
@@ -74,5 +74,18 @@ class PembatalanModel
         $this->db->execute();
 
         return $this->db->rowCount();
+    }
+
+    public function cariPembatalan($key)
+    {
+        $this->db->query('SELECT pembatalan.*, peminjaman.id_peminjaman, petugas.nama_petugas, peminjam.nama_peminjam 
+                    FROM ' . $this->table . ' 
+                    JOIN peminjaman ON peminjaman.id_peminjaman = pembatalan.id_peminjaman 
+                    JOIN petugas ON petugas.id_petugas = pembatalan.id_petugas 
+                    JOIN peminjam ON peminjam.id_peminjam = pembatalan.id_peminjam 
+                    WHERE petugas.nama_petugas LIKE :key OR peminjam.nama_peminjam LIKE :key');
+        $this->db->bind('key', '%' . $key . '%'); // Perbaikan pada bagian ini
+
+        return $this->db->resultSet();
     }
 }

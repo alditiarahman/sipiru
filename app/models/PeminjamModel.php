@@ -60,4 +60,12 @@ class PeminjamModel
 
         return $this->db->rowCount();
     }
+
+    public function cariPeminjam()
+    {
+        $key = $_POST['key'];
+        $this->db->query('SELECT peminjam.*, asalpeminjam.asal_peminjam FROM ' . $this->table . ' JOIN asalpeminjam ON asalpeminjam.id_asal = peminjam.id_asal WHERE nama_peminjam LIKE :key');
+        $this->db->bind('key', "%$key%");
+        return $this->db->resultSet();
+    }
 }

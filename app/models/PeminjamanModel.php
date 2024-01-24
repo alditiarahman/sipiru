@@ -77,4 +77,17 @@ class PeminjamanModel
 
         return $this->db->rowCount();
     }
+
+    public function cariPeminjaman($key)
+    {
+        $this->db->query('SELECT peminjaman.*, ruangan.nama_ruangan, petugas.nama_petugas, peminjam.nama_peminjam 
+                    FROM ' . $this->table . ' 
+                    JOIN ruangan ON ruangan.id_ruangan = peminjaman.id_ruangan 
+                    JOIN petugas ON petugas.id_petugas = peminjaman.id_petugas 
+                    JOIN peminjam ON peminjam.id_peminjam = peminjaman.id_peminjam 
+                    WHERE petugas.nama_petugas LIKE :key OR peminjam.nama_peminjam LIKE :key');
+        $this->db->bind('key', '%' . $key . '%'); // Perbaikan pada bagian ini
+
+        return $this->db->resultSet();
+    }
 }

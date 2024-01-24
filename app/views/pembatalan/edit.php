@@ -23,7 +23,7 @@
                 <input type="hidden" name="id_pembatalan" value="<?= $data['pembatalan']['id_pembatalan']; ?>">
                 <div class="card-body">
                     <div class="form-group">
-                        <label>Peminjaman ID</label>
+                        <label>ID Peminjaman</label>
                         <select class="form-control" name="id_peminjaman">
                             <option value="">Pilih</option>
                             <?php foreach ($data['peminjaman'] as $row) : ?>
@@ -36,27 +36,27 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Petugas ID</label>
+                        <label>Nama Petugas</label>
                         <select class="form-control" name="id_petugas">
                             <option value="">Pilih</option>
                             <?php foreach ($data['petugas'] as $row) : ?>
                                 <option value="<?= $row['id_petugas']; ?>" <?php if ($data['pembatalan']['id_petugas'] == $row['id_petugas']) {
                                                                                 echo "selected";
                                                                             } ?>>
-                                    <?= $row['id_petugas']; ?>
+                                    <?= $row['nama_petugas']; ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label>Peminjam ID</label>
+                        <label>Nama Peminjam</label>
                         <select class="form-control" name="id_peminjam">
                             <option value="">Pilih</option>
                             <?php foreach ($data['peminjam'] as $row) : ?>
                                 <option value="<?= $row['id_peminjam']; ?>" <?php if ($data['pembatalan']['id_peminjam'] == $row['id_peminjam']) {
                                                                                 echo "selected";
                                                                             } ?>>
-                                    <?= $row['id_peminjam']; ?>
+                                    <?= $row['nama_peminjam']; ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>

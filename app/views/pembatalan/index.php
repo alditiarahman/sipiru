@@ -45,10 +45,10 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
-                            <th style="width: 10px">#</th>
-                            <th>Peminjaman ID</th>
-                            <th>Petugas ID</th>
-                            <th>Peminjam ID</th>
+                            <th style="width: 10px">No</th>
+                            <th>ID Peminjaman</th>
+                            <th>Petugas</th>
+                            <th>Peminjam</th>
                             <th>Tanggal Pembatalan</th>
                             <th>Waktu Pembatalan</th>
                             <th>Alasan Pembatalan</th>
