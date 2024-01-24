@@ -59,6 +59,14 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="<?= base_url; ?>/peminjaman" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>
+                                Data Peminjaman
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a href="<?= base_url; ?>/user" class="nav-link">
                             <i class="nav-icon fas fa-user-circle"></i>
                             <p>
